@@ -1,19 +1,37 @@
+const defaultOptions = {
+  backgroundColor: '#2a2a2a',
+  bandColor: '#002054',
+  textColor: '#fff',
+  duration: 1000,
+}
+
 
 /**
  * 
  * @param {String} message 
- * @param {{backgroundColor: String, bandColor: String, textColor: String, duration: number}} options 
+ * @param {{backgroundColor: String?, bandColor: String?, textColor: String?, duration: number}} options 
  */
 const evoLog = (message, options) => {
 
-  options = options || { backgroundColor: '#000', bandColor: '#ff0000', textColor: '#fff', duration: 5000 };
+  let updatedOptions = {};
+
+  if (options !== undefined) {
+    updatedOptions.backgroundColor = options.backgroundColor || defaultOptions.backgroundColor;
+    updatedOptions.bandColor = options.bandColor || defaultOptions.bandColor;
+    updatedOptions.textColor = options.textColor || defaultOptions.textColor;
+    updatedOptions.duration = options.duration || defaultOptions.duration;
+  }
+  else {
+    updatedOptions = defaultOptions;
+  }
 
   //Default to console.log
   console.log(message);
-
-  //Print the console.log also to the browser
-  showConsoleLogPopoup(message, options);
+  console.log(updatedOptions);
+  //Print the console.log also to the browser window
+  showConsoleLogPopoup(message, updatedOptions);
 };
+
 
 
 /**
@@ -23,7 +41,8 @@ const evoLog = (message, options) => {
  */
 const showConsoleLogPopoup = (message, options) => {
 
-  const containerStyle = `background-color: ${options.backgroundColor};padding: 1rem; border-radius: 6px; color: ${options.textColor}; font-family: sans; width: max-content; float: right; position: relative`;
+
+  const containerStyle = `background-color: ${options.backgroundColor};padding: 1rem; margin:0.3rem; border-radius: 6px; color: ${options.textColor}; font-family: sans; width: max-content; float: right; position: relative`;
   const bandStyle = `position:absolute; height: 100%; width:4px; background-color:${options.bandColor}; left:0; top:0; border-radius: 6px 0 0 6px`;
 
   //Create a new div

@@ -1,11 +1,13 @@
 {
-  "name": "evolog",
+  "name": "EvoLog",
   "version": "1.0.0",
-  "description": "",
+  "description": "Use the evoLog function to log messages to the console and to the browser window.",
   "main": "src/index.js",
+  "bin": "src/index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "npm run build && npm publish"
   },
   "author": "macro21KGB",
   "license": "ISC"
