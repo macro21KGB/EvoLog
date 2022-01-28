@@ -1,6 +1,6 @@
 const defaultOptions = {
   backgroundColor: '#2a2a2a',
-  bandColor: '#002054',
+  bandColor: '#002064',
   textColor: '#fff',
   duration: 1000,
 }
@@ -27,7 +27,7 @@ const evoLog = (message, options) => {
 
   //Default to console.log
   console.log(message);
-  console.log(updatedOptions);
+
   //Print the console.log also to the browser window
   showConsoleLogPopoup(message, updatedOptions);
 };
@@ -42,7 +42,7 @@ const evoLog = (message, options) => {
 const showConsoleLogPopoup = (message, options) => {
 
 
-  const containerStyle = `background-color: ${options.backgroundColor};padding: 1rem; margin:0.3rem; border-radius: 6px; color: ${options.textColor}; font-family: sans; width: max-content; float: right; position: relative`;
+  const containerStyle = `background-color: ${options.backgroundColor};padding: 1rem; margin:0.3rem; border-radius: 6px; color: ${options.textColor}; font-family: sans; width: max-content; float: right; position: absolute; top:0; right:0;`;
   const bandStyle = `position:absolute; height: 100%; width:4px; background-color:${options.bandColor}; left:0; top:0; border-radius: 6px 0 0 6px`;
 
   //Create a new div

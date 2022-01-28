@@ -1,14 +1,23 @@
 {
-  "name": "EvoLog",
+  "name": "evolog",
   "version": "1.0.0",
-  "description": "Use the evoLog function to log messages to the console and to the browser window.",
+  "description": "Use evolog to log messages to the console and to the browser window.",
   "main": "src/index.js",
   "bin": "src/index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "npm run build && npm publish"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "logging",
+    "console",
+    "browser",
+    "window",
+    "evolog",
+    "utility",
+    "debug",
+    "macro21kgb"
+  ],
   "author": "macro21KGB",
   "license": "ISC"
 }
