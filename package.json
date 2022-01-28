@@ -1,6 +1,6 @@
 {
   "name": "evolog",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use evolog to log messages to the console and to the browser window.",
   "main": "src/index.js",
   "bin": "src/index.js",
