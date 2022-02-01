@@ -42,7 +42,8 @@ const evoLog = (message, options) => {
 const showConsoleLogPopoup = (message, options) => {
 
 
-  const containerStyle = `background-color: ${options.backgroundColor};padding: 1rem; margin:0.3rem; border-radius: 6px; color: ${options.textColor}; font-family: sans; width: max-content; float: right; position: absolute; top:0; right:0;`;
+  const containerStyle = `background-color: ${options.backgroundColor};padding: 1rem; margin:0.3rem; border-radius: 6px; color: ${options.textColor}; font-family: sans; width: max-content; float: right; position: fixed; top:0; right:0;`;
+
   const bandStyle = `position:absolute; height: 100%; width:4px; background-color:${options.bandColor}; left:0; top:0; border-radius: 6px 0 0 6px`;
 
   //Create a new div
@@ -60,7 +61,7 @@ const showConsoleLogPopoup = (message, options) => {
   //Append to the body
   document.body.appendChild(newDiv);
 
-  //Remove after 1 second
+  //Remove after duration time has passed
   setTimeout(() => {
     newDiv.remove();
   }, options.duration);
