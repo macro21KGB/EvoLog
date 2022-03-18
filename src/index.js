@@ -28,6 +28,10 @@ const evoLog = (message, options) => {
   //Default to console.log
   console.log(message);
 
+  console.error = (errorMessage) => {
+    showConsoleLogPopoup(errorMessage, updatedOptions);
+  }
+
   //Print the console.log also to the browser window
   showConsoleLogPopoup(message, updatedOptions);
 };
